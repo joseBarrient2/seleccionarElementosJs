@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<style>
+		.content{padding-bottom: 40px;}
+		.general{width: 80%;margin: 0 auto;}
+		.claseAgregada{width: 150px;
+			height: 150px;
+			border: solid thin red;
+			background: greenyellow;
+		}
+		.conten-inicio{width: 400px;
+					background: grey;
+					padding: 20px;
+				}
+		#box{width: 200px;padding: 20px;background: grey;}
+		#item{padding: 20px;background: rgb(95, 95, 95);}
+		.padre1{padding: 40px;border: solid 2px orangered;}
+		.itemHijo{width: 50px;height: 50px;background: rgb(206, 206, 206);color: #666;}
+		.padre2{padding: 20px;border:solid thin #666 ;width: 200px;}
+		.box{padding: 20px;border:solid thin #666 ;}
+		.seleccionado{font-family: Arial, Helvetica, sans-serif;font-weight: bold;color: orangered;}
+	</style>
+	<body>
+		<section class="general">
+		<section class="content">
+			<h2>SELECCIONAR ELEMENTOS</h2><br><br>
+			<h3>getElementById</h3>
+			<p>Esta propiedad puede selecciona solo los elemento del dom por su ID.</p><br><br>
+			<section id="box">
+				<div id="item"></div>
+			</section>
+		</section>
+		<section class="content">
+			<h3>querySelector</h3>
+			<p>Esa propiedad puede selecciona los elemento por medio de su clase o id</p><br><br>
+			<section id="box2">
+			</section>
+		</section>
+
+		<section class="content">
+			<h3>querySelectorAll</h3>
+			<p>Esa propiedad puede selecciona todos los elemento que coincidan con la clase o id</p><br><br>
+			<section id="box2">
+				<div class="nodo">1</div>
+				<div class="nodo">2</div>
+				<div class="nodo">3</div>
+				<div class="nodo">4</div>
+				<div class="nodo">5</div>
+			</section>
+		</section>
+		<section class="content">
+			<section id="box3">
+				<h3>getElementsByClassName</h3>
+			   <p>Nos devuelve un objeto parecido a una matriz de todos. Todos sus elementos provienen de una misma clase</p><br><br>
+				<div class="casa">1</div>
+				<div class="casa">2</div>
+				<div class="casa">3</div>
+				<div class="casa">4</div>
+				<div class="casa">5</div>
+			</section>
+		</section>
+		<section class="content">
+			<section id="box3">
+				<h3>MODIFICAR ELEMENTOS</h3><br><br>
+				<h3>textContent</h3>
+			   <p>Esta propiedad sirve para modificar o agregar contenido a un elemento en el dom.</p><br><br>
+			   <h2 class="be">cambiar texto de parrafo</h2>
+			  
+			</section>
+		</section>
+		<section class="content">
+			<section id="box3">
+				<h3>innerHTM</h3>
+			   <p>Esta propiedad puede modificar y agregar codigo HTML en un elemento del dom.</p><br><br>
+			   
+			    <div class="home">
+
+				</div>
+			  
+			</section>
+		</section>
+		<section class="content">
+			<section id="box3">
+				<h3>ESTILOS</h3>
+				<h3>style</h3>
+			   <p>Esta propiedad style sirve para agregar propiedades css inline en un elemento del dom.</p><br><br>
+			   
+			    <div class="home2">
+
+				</div>
+			  
+			</section>
+		</section>
+		<section class="content">
+			<section id="box3">
+				<h3>classList.add</h3>
+			   <p>La propiedad classList.add  agrega nombres de clases css a elementos del dom. busca la clase en la hoja de estilos y le agrega.</p><br><br>
+			   
+			    <div class="home3">
+
+				</div>
+			  
+			</section>
+		</section>
+
+		<section class="content">
+			<section id="box3">
+				<h3>DOM TRAVERSING</h3><br><br>
+				<h3>parentElement</h3>
+			   <p>La propiedad parentElement  nos devuelve el elemento padre del nodo actual que seleccionemos</p><br><br>
+			   
+			    <div class="padre1">
+					padre
+                    <div class="itemHijo">
+                        hijo
+					</div>
+				</div>
+			  
+			</section>
+		</section>
+
+		<section class="content">
+			<section id="box3">
+				<h3>nextElementSibling</h3>
+			   <p>La propiedad parentElement  nos devuelve el elemento padre del nodo actual que seleccionemos</p><br><br>
+			   
+			    <div class="padre2">
+					principal
+                    <div class="box">
+                        primer hijo						
+					</div>
+					<div class="item">
+						nextElementSibling
+					</div>
+				</div>
+			  
+			</section>
+		</section>
+
+		<section class="content">
+			<section id="box3">
+				<h3>CREATE HTML</h3><br><br>
+				<h3>createElement</h3>
+			   <p>La propiedad createElement  ayuda a crear cualquier elemento en el dom ejem: div, img,section, nav,ul, li, etc</p><br><br>
+
+			   <h3>textContent</h3>
+			   <p>Esta propiedad sirve para modificar o agregar contenido a un elemento en el dom.</p><br><br>
+
+			   <h3>classList.add</h3>
+			   <p>La propiedad classList.add es usada para agregar nuevas clases a cualquier elemento del dom.</p><br><br>
+
+			   <h3>appendChild</h3>
+			   <p>La propiedad appendChild agrega un nodo al final de los elemento hijo de su nodo padre seleccionado.</p><br><br>
+			   
+			    <div class="conten-inicio">
+					<ul class="lista">
+						<li>Manzana</li>
+						<li>Pera</li>
+					</ul>
+				</div>
+			  
+			</section>
+		</section>
+</section>	
+		
+		<!-- <script src="./app.js"></script> -->
+		<!-- <script src="./01_getElements.js"></script> -->
+		<!-- <script src="./02_modifiedElement.js"></script> -->
+		<!-- <script src="./03_estilos.js"></script> -->
+		<!-- <script src="./04_domTraversing.js"></script> -->
+		<!-- <script src="./05_createHTML.js"></script> -->
+		<script src="script.js"></script>
+	</body>
+</html>
